@@ -1,0 +1,36 @@
+.myHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: bisque;
+    border-bottom: 1px solid black;
+}
+.myHeader h1 {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navigation .navList {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.navList li a {
+    text-decoration: none;
+    color: #111;
+}
+.navList li button {
+    padding: 8px 12px;
+    background-color: bisque;
+    color: #388f55;
+    border: 2px solid #388f55;
+    border-radius: 24px;
+    font-weight: 700;
+}
