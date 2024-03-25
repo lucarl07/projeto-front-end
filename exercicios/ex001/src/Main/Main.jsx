@@ -21,6 +21,14 @@ const mario = {
     ativa: false,
 };
 
+const situacaoDaConta = (situacao) => {
+    if (situacao === 'Ativa') {
+        return (<span style={{color: '#3CB043'}}>Ativa</span>)
+    } else {
+        return (<span style={{color: '#D30000'}}>Inativa</span>)
+    }
+}
+
 const somarDespesas = (compras) => {
     let acumulo = 0;
 
@@ -33,13 +41,9 @@ const somarDespesas = (compras) => {
 }
 
 const nivelDeGastos = (despesa) => {
-    let userStatus = document.querySelector('.user-status')
-
     if (despesa < 10000) {
-        userStatus.style.color = '#3CB043'
         return 'Você está no caminho certo!';
     } else {
-        userStatus.style.color = '#D30000'
         return 'Você está gastando muito!';
     }
 }
@@ -53,7 +57,7 @@ const App = () => {
         <div>
             <p>Nome: <span>{dados.cliente}</span></p>
             <p>Idade: <span>{dados.idade}</span></p>
-            <p>Situação: <span className="user-status">{situacao}</span></p>
+            <p>Situação: {situacaoDaConta(situacao)}</p>
             <p>Gasto Total: <span>{despesa}</span></p>
             <p>{nivelDeGastos(despesa)}</p>
         </div>
