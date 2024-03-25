@@ -32,17 +32,30 @@ const somarDespesas = (compras) => {
     return acumulo;
 }
 
+const nivelDeGastos = (despesa) => {
+    let userStatus = document.querySelector('.user-status')
+
+    if (despesa < 10000) {
+        userStatus.style.color = '#3CB043'
+        return 'Você está no caminho certo!';
+    } else {
+        userStatus.style.color = '#D30000'
+        return 'Você está gastando muito!';
+    }
+}
+
 const App = () => {
     const dados = luana;
     const situacao = dados.ativa ? 'Ativa' : 'Inativa';
+    const despesa = somarDespesas(dados.compras)
 
     return (
         <div>
             <p>Nome: <span>{dados.cliente}</span></p>
             <p>Idade: <span>{dados.idade}</span></p>
-            <p>Situação: <span>{situacao}</span></p>
-            <p>Gasto Total: <span>{somarDespesas(dados.compras)}</span></p>
-            <p>...</p>
+            <p>Situação: <span className="user-status">{situacao}</span></p>
+            <p>Gasto Total: <span>{despesa}</span></p>
+            <p>{nivelDeGastos(despesa)}</p>
         </div>
     );
 }
