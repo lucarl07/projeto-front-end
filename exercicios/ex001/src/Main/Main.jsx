@@ -22,11 +22,12 @@ const mario = {
 };
 
 const somarDespesas = (compras) => {
-    let acumulo;
+    let acumulo = 0;
 
-    compras.reduce((item, acc) => {
-        //...
-    })
+    compras.forEach(compra => {
+        let custo = Number(compra.preco.replace('R$ ',''))
+        acumulo += custo;
+    });
 
     return acumulo;
 }
