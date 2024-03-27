@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const luana = {
     cliente: 'Luana',
     idade: 27,
@@ -23,9 +24,9 @@ const mario = {
 
 const situacaoDaConta = (situacao) => {
     if (situacao === 'Ativa') {
-        return (<span style={{color: '#3CB043'}}>Ativa</span>)
+        return (<span style={{color: 'green'}}>Ativa</span>)
     } else {
-        return (<span style={{color: '#D30000'}}>Inativa</span>)
+        return (<span style={{color: 'red'}}>Inativa</span>)
     }
 }
 
