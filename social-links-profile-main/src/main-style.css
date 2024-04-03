@@ -1,3 +1,6 @@
+/** MAIN STYLESHEET **/
+
+/* Variables: */
 :root {
     /* Primary colors: */
     --Green: hsl(75, 94%, 57%);
@@ -12,6 +15,7 @@
     --Paragraph: 14px;
 }
 
+/* Global properties: */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +23,19 @@
     font-family: "Inter", sans-serif;
 }
 
+/* Font - Inter (400, 600 & 700): */
 @font-face {
     font-family: 'Inter';
     src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+/* Body properties: */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Off-Black);
+    color: white;
 }
