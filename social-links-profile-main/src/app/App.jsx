@@ -11,7 +11,7 @@ import imgAvatar from '../assets/images/avatar-jessica.jpeg'
 
 const PersonInfo = (props) => {
     return (
-        <div>
+        <div className='personInfo'>
             <img src={props.photo} alt="Foto de perfil do(a) usuário(a)" />
             <article>
                 <h1>{props.fullName}</h1>
@@ -21,29 +21,45 @@ const PersonInfo = (props) => {
     );
 }
 
-const SocialMedia = (props) => {
+const Quote = (props) => {
     return (
-        <>
-            <p>&quot;{props.quote}&quot;</p>
+        <p className='quote'>
+            &quot;{props.quote}&quot;
+        </p>
+    );
+}
 
+const AnchorButton = (props) => {
+    return (
+        <button className='btn'>
+            <a href={props.href}>
+                {props.name}
+            </a>
+        </button>
+    );
+}
+
+const SocialMedia = () => {
+    return (
+        <div className='socialMedia'>
             <ul className='btnList'>
                 <li className='listItem'>
-                    <button className='btn'>GitHub</button>
+                    <AnchorButton name='GitHub' href='' />
                 </li>
                 <li className='listItem'>
-                    <button className='btn'>Frontend Mentor</button>
+                    <AnchorButton name='Frontend Mentor' href='' />
                 </li>
                 <li className='listItem'>
-                    <button className='btn'>Linkedin</button>
+                    <AnchorButton name='Linkedin' href='' />
                 </li>
                 <li className='listItem'>
-                    <button className='btn'>Twitter</button>
+                    <AnchorButton name='Twitter' href='' />
                 </li>
                 <li className='listItem'>
-                    <button className='btn'>Instagram</button>
+                    <AnchorButton name='Instagram' href='' />
                 </li>
             </ul>
-        </>
+        </div>
     );
 }
 
@@ -52,7 +68,8 @@ const App = () => {
     return (
         <section className='float'>
             <PersonInfo fullName="Jessica Randall" location="London, United Kingdom" photo={imgAvatar} />
-            <SocialMedia quote="Front-end developer and avid reader." />
+            <Quote quote="Front-end developer and avid reader." />
+            <SocialMedia />
         </section>
     );
 }
