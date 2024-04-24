@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './modal/App'
+import App from './revisao_use_state/contador/App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

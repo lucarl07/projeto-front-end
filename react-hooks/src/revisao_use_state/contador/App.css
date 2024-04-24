@@ -1,0 +1,25 @@
+:root {
+  --gray: #525252;
+  --dark-gray: #313131;
+  --very-dark-gray: #1f1f1f;
+}
+
+#App {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.countChanger {
+  cursor: pointer;
+  width: 25px;
+  height: 30px;
+  color: white;
+  background-color: var(--dark-gray);
+  border-color: 
+    var(--gray) 
+    var(--very-dark-gray) 
+    var(--very-dark-gray) 
+    var(--gray);
+  border-radius: 0;
+}
