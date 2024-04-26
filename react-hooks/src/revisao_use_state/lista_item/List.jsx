@@ -1,18 +1,27 @@
 import React from "react";
 
 const List = () => {
-  const [items, setItems] = React.useState(['item 1', 'item 2'])
+  const [items, setItems] = React.useState([])
 
-  const HandleClick = (newItem) => {
+  const addItem = () => {
+    const itemIndex = items.length;
+    const newItem = `item ${itemIndex}`
     setItems([...items, newItem])
+  }
+
+  const remItem = () => {
+    items.pop();
+    setItems([...items])
   }
 
   return (
     <>
-      <button onClick={() => HandleClick('Novo item!')}>
-        Adicionar
+      <button id="btnAddItem" onClick={() => addItem()}>
+        Adicionar item
       </button>
-
+      <button id="btnRemItem" onClick={() => remItem()}>
+        Remover item
+      </button>
       <ul>
         {items.map((item, index) => (
           <li key={index}>
