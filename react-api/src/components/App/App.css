@@ -1,0 +1,9 @@
+div#root {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: inherit;
+    flex-direction: row;
+}
