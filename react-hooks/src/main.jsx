@@ -1,16 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Input from './form/Input'
-// import App from './revisao_use_state/contador/App'
-// import List from './revisao_use_state/lista_item/List'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Input from './form/Input';
+import TextArea from './form/TextArea';
+import Select from './form/Select';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App/>
-    <br />
-    <List/>
-    <br /> */}
-    
     <Input/>
+    <TextArea/>
+    <Select/>
   </React.StrictMode>,
 )
