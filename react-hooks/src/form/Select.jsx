@@ -11,9 +11,9 @@ const Select = () => {
         onChange={({target}) => setSelect(target.value)}
       >
         <option disabled value="">Selecione...</option>
-        <option value="sesi">Sesi</option>
-        <option value="senai">Senai</option>
-        <option value="iel">IEL</option>
+        <option value="Sesi">Sesi</option>
+        <option value="Senai">Senai</option>
+        <option value="IEL">IEL</option>
       </select>
       <p>
         <strong>Sua instituição é:</strong> {select}

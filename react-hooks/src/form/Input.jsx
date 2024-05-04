@@ -1,25 +1,21 @@
+/* eslint-disable */
 import React from "react";
 
-const Input = () => {
-  const [nome, setNome] = React.useState("")
-
-  const clickSubmit = (event) => {
-    event.preventDefault()
-    console.log(event);
-  }
+const Input = ({label, id, setValue, ...props}) => {
+  const parsedLabel = label.charAt(0).toUpperCase() + label.slice(1)
 
   return (
-    <form onSubmit={clickSubmit}>
-      <h2>{nome}</h2>
-      <label htmlFor="inNome">Nome:</label>
-      <input 
-        type="text" 
-        id="inNome"
-        value={nome}
-        onChange={(event) => setNome(event.target.value)}
+    <>
+      <label htmlFor={id}>
+        {parsedLabel}:
+      </label> <br />
+      <input
+        id={id}
+        name={id}
+        onChange={({target}) => setValue(target.value)}
+        {...props}
       />
-      <input type="submit" value="Enviar" />
-    </form>
+    </>
   );
 }
 
